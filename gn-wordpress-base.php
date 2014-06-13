@@ -51,11 +51,6 @@ function gnwpbase_css() {
 	wp_enqueue_style( 'gnwpbase-css', GNWPBASE_PLUG_URL . '/gnwpbase.css');
 }
 
-/**************************
-* ENQUEUE FRONT
-**************************/
-
-
 
 /**************************
 * ADMIN FUNCTION
