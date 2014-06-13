@@ -3,7 +3,7 @@
 Plugin Name: gnoyelle : Réglages Bases pour WordPress
 Plugin URI: http://wwww.gregoirenoyelle.com
 Description: Pour les sites développé par Grégoire Noyelle. Indépendamment de Genesis.
-Version: 1.2
+Version: 1.3
 Author: Grégoire Noyelle
 Author URI: http://wwww.gregoirenoyelle.com
 License: GNU General Public License v2
