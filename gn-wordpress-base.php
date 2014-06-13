@@ -8,7 +8,7 @@ Author: Grégoire Noyelle
 Author URI: http://wwww.gregoirenoyelle.com
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-GitHub Plugin URI: https://github.com/gregoirenoyelle/wp_plug_wordpress_base
+GitHub Plugin URI: https://github.com/gregoirenoyelle/gnoyelle-wordpress-base
 GitHub Branch: master
 */
 
@@ -84,3 +84,6 @@ function gn_tinymce_filtre($arr){
     return $arr;
   }
 add_filter('tiny_mce_before_init', 'gn_tinymce_filtre');
+
+
+/// ajout test le 13/06/2014 21h30
