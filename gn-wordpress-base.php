@@ -6,7 +6,10 @@ Description: Pour les sites développé par Grégoire Noyelle. Indépendamment d
 Version: 1.0
 Author: Grégoire Noyelle
 Author URI: http://wwww.gregoirenoyelle.com
-License: GPL2
+License: GNU General Public License v2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+GitHub Plugin URI: https://github.com/gregoirenoyelle/wp_plug_wordpress_base
+GitHub Branch: master
 */
 
 // If this file is called directly, abort.
