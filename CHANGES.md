@@ -1,5 +1,9 @@
 # ChangeLog For WordPress Base
 
+## 1.5
+
+* new constant
+* new set up for tinymce
 
 ## 1.3
 

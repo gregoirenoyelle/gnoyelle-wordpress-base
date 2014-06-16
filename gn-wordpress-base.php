@@ -3,7 +3,7 @@
 Plugin Name: gnoyelle : Réglages Bases pour WordPress
 Plugin URI: http://wwww.gregoirenoyelle.com
 Description: Pour les sites développé par Grégoire Noyelle. Indépendamment de Genesis.
-Version: 1.4
+Version: 1.5
 Author: Grégoire Noyelle
 Author URI: http://wwww.gregoirenoyelle.com
 License: GNU General Public License v2
@@ -26,11 +26,11 @@ if ( ! defined('DISALLOW_FILE_EDIT') ) {
 * CONSTANTES
 ************/
 
-if ( ! defined( 'GNWPBASE_PLUG_PATH' ) ) {
-	define('GNWPBASE_PLUG_PATH', plugin_dir_path( __FILE__ ) );
+if ( ! defined( 'GN_WPB_PLUG_PATH' ) ) {
+	define('GN_WPB_PLUG_PATH', plugin_dir_path( __FILE__ ) );
 }
-if ( ! defined( 'GNWPBASE_PLUG_URL' ) ) {
-	define('GNWPBASE_PLUG_URL', plugin_dir_url( __FILE__ ) );
+if ( ! defined( 'GN_WPB_PLUG_URL' ) ) {
+	define('GN_WPB_PLUG_URL', plugin_dir_url( __FILE__ ) );
 }
 
 /**************************
@@ -40,7 +40,7 @@ if ( ! defined( 'GNWPBASE_PLUG_URL' ) ) {
 // scripts
 add_action('admin_enqueue_scripts','gnwpbase_scripts');
 function gnwpbase_scripts(){
-	wp_register_script('gnwpbase-scripts', GNWPBASE_PLUG_URL . '/gnwpbase.js', array('jquery'),'1.0',true);
+	wp_register_script('gnwpbase-scripts', GN_WPB_PLUG_URL . '/gnwpbase.js', array('jquery'),'1.0',true);
 	// place for conditionnal
 	wp_enqueue_script('gnwpbase-scripts');
 }
@@ -48,7 +48,7 @@ function gnwpbase_scripts(){
 // CSS
 add_action('admin_print_styles', 'gnwpbase_css', 11);
 function gnwpbase_css() {
-	wp_enqueue_style( 'gnwpbase-css', GNWPBASE_PLUG_URL . '/gnwpbase.css');
+	wp_enqueue_style( 'gnwpbase-css', GN_WPB_PLUG_URL . '/gnwpbase.css');
 }
 
 
@@ -80,10 +80,11 @@ if ( ! function_exists('aff_v') ) {
 * Paragraph=p;Address=address;Pre=pre;Heading 1=h1;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5; Heading 6=h6
 ***/
 function gn_tinymce_filtre($arr){
+	// remove h1 and h2
     $arr['block_formats'] = 'Paragraph=p;Address=address;Heading 3=h3;Heading 4=h4;Heading 5=h5';
+    // remove Style color
+    $arr['toolbar2']='formatselect,underline,alignjustify,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help';
     return $arr;
   }
 add_filter('tiny_mce_before_init', 'gn_tinymce_filtre');
 
-
-/// ajout test le 13/06/2014 21h30
