@@ -1,5 +1,9 @@
 # ChangeLog For WordPress Base
 
+## 1.5.2
+
+* tinymce in other plugin
+
 ## 1.5
 
 * new constant
